@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="myscript.js"></script>
+    <link rel="icon" type="image/x-icon" href="venus.ico">
+    <title>Venus</title>
+</head>
+<body style="background-color: black; margin: 0;">
+    <div style="position: relative; width: 100%;  margin: auto;">
+        <video autoplay muted loop playsinline style="width: 100%; height: auto; display: block;">
+          <source src="churros.mp4" type="video/mp4" />
+          Browserul tău nu suportă video tag-ul.
+        </video>
+        <div style="
+        position: absolute; 
+        top: 30%; 
+        left: 47%; 
+        transform: translate(-50%, -50%); 
+        color: rgb(242, 151, 72); 
+        text-align: center; 
+        text-shadow: 0 0 10px rgba(0,0,0,0.7);
+        pointer-events: none;
+      ">
+        <h1 style="margin: 0; line-height: 1;">
+          <span style="font-family: 'Great Vibes', cursive; font-size: 3rem; color: rgb(242, 151, 72);">H</span>
+          <span style="font-family: 'Courier New', monospace;">APPY 2 MONTHS!</span>
+        </h1>
+        <h2>♡♡</h2>
+      </div>
+      </div>
+      <section style="background-color: black; text-align: center; padding: 50px 20px;">
+        <h1 style="margin: 0; font-size: 3rem;">
+          <span style="font-family: 'Great Vibes', cursive;  color:rgb(169, 169, 169)">2 luni ;)</span>
+        </h1>
+        <p style="margin-top: 10px;  color: #f29748; font-family: 'Courier New', monospace;">
+          (sunt aproape perfecte, mai trebuiau doar rotite puțin pe bune…)
+        </p>
+        <div style="width: 100%; max-width: 800px; margin: 30px auto 0 auto;">
+          <video autoplay muted loop playsinline style="width: 100%; height: auto; display: block;">
+            <source src="2luni.mp4" type="video/mp4" />
+            Browserul tău nu suportă video tag-ul.
+          </video>
+        </div>
+      
+      </section>
+      <div style="position: relative; width: 100%; text-align: center;">
+        <img src="venus.jpeg" style="width: 100%; display: block;">
+        <h2 style="font-family: 'Allura'; position: absolute;font-size: 2rem;  top: 20%; left: 50%; transform: translateX(-50%); color: white;">
+         Deja oricum 2 e cifră de suflet… dar  îi pot atribui atât de multe semnificații pe lângă 22-ul nostru- 2 brațe în a căror cuprindere care mă simt cel mai safe, 2 mâini a căror atingere mă amețește, 2 buze a căror sărut se simte precum acasă, 2 ochi care cu o privire mă consolează instant, șiii acum 2 luni in care am simțit mai mult decât vreodată in viața mea :)
+        </h2>
+      
+        <div>
+          <button class="mybutton" onclick="goToPage('casino.html')">Casino</button>
+          <button class="mybutton" onclick="goToPage('memory.html')">Memory</button>
+          <button class="mybutton" onclick="goToPage('mixtape.html')">Mixtape</button>
+        </div>
+      </div>
+      
+    
+
+
+  
+    <audio id="bg-music" autoplay loop>
+        <source src="ebyt.mp3" type="audio/mpeg" />
+      </audio>
+      
+     <script>
+  const audio = document.getElementById('bg-music');
+  let audioStarted = false;
+
+  function startMusic() {
+    if (audioStarted) return;
+
+    audio.play().then(() => {
+      audioStarted = true;
+      console.log('Muzica a pornit.');
+    }).catch((err) => {
+      console.warn('Eroare la play:', err);
+    });
+
+    window.removeEventListener('click', startMusic);
+    window.removeEventListener('keydown', startMusic);
+  }
+
+  // Așteaptă interacțiune
+  window.addEventListener('click', startMusic);
+  window.addEventListener('keydown', startMusic);
+</script>
+
+      
+</body>
+</html>

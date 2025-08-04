@@ -1,0 +1,96 @@
+.mybutton {
+    background-color: #f29748; /* culoarea fundalului */
+    color: white;              /* culoarea textului */
+    padding: 15px 15px;        /* spațiu interior */
+    border: none;              /* fără chenar */
+    border-radius: 5px;        /* colțuri rotunjite */
+    font-size: 1rem;           /* dimensiune text */
+    cursor: pointer;           /* cursor mână la hover */
+    transition: background-color 0.3s ease;
+    margin: 20px;
+  }
+  
+  .mybutton:hover {
+    background-color: #d97b2e;
+  }
+  
+
+
+.global-controls {
+  margin-bottom: 30px;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.top-image {
+  width: 400px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+#togglePlayPause {
+  font-size: 28px;
+  color:white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#togglePlayPause:hover {
+  transform: scale(1.2);
+}
+
+
+.container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card input[type="radio"] {
+  margin-bottom: 10px;
+}
+
+.card .text {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #650a0a;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+body.with-background {
+  background-image: url('img.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+

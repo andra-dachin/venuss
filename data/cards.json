@@ -1,0 +1,26 @@
+[
+    {
+        "image": "../assets/2.png",
+        "name":"2"
+    },
+    {
+        "image": "../assets/3.png",
+        "name":"3"
+    },
+    {
+        "image": "../assets/4.png",
+        "name":"4"
+    },
+    {
+        "image": "../assets/5.png",
+        "name":"5"
+    },
+    {
+        "image": "../assets/6.png",
+        "name":"6"
+    },
+    {
+        "image": "../assets/7.png",
+        "name":"7"
+    }
+]
