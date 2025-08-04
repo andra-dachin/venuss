@@ -94,3 +94,10 @@ body.with-background {
   background-attachment: fixed;
 }
 
+@media (max-width: 480px) {
+      .container h2 {
+        font-size: 1.2rem;
+        padding: 5px;
+      }
+    }
+
