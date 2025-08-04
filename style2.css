@@ -1,9 +1,4 @@
-body {
-  min-height: 100vh;
-  min-width: 100vh;
-  background-color: #291d14;
-  color: white;
-}
+
 
 h1 {
     text-align: center;
@@ -31,12 +26,26 @@ p {
     color: #291d14;
 }
 
+body {
+  min-height: 100vh;
+  background-color: #291d14;
+  color: white;
+  margin: 0;
+  padding: 0 10px; /* margini laterale mici pe mobil */
+  box-sizing: border-box;
+}
+
 .grid-container {
   display: grid;
   justify-content: center;
   grid-gap: 16px;
-  grid-template-columns: repeat(6, 112px);
+  grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
   grid-template-rows: repeat(2, 140px);
+  max-width: 600px; /* maximă lățime a gridului, ca să nu fie full screen pe desktop */
+  margin: 0 auto;   /* centrează containerul pe desktop */
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .card {

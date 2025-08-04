@@ -33,6 +33,22 @@
         <h2>♡♡</h2>
       </div>
       </div>
+      <button id="play-music" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 10px 10px;
+    background-color: #c8762e;
+    color: white;
+    border: none;
+    border-radius: 99px;
+    font-size: 16px;
+    font-family: 'Courier New', monospace;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  ">ʚɞ</button>
+
       <section style="background-color: black; text-align: center; padding: 50px 20px;">
         <h1 style="margin: 0; font-size: 3rem;">
           <span style="font-family: 'Great Vibes', cursive;  color:rgb(169, 169, 169)">2 luni ;)</span>
@@ -59,11 +75,12 @@
 </div>
 
 
-        <div>
-          <button class="mybutton" onclick="goToPage('casino.html')">Casino</button>
-          <button class="mybutton" onclick="goToPage('memory.html')">Memory</button>
-          <button class="mybutton" onclick="goToPage('mixtape.html')">Mixtape</button>
-        </div>
+        <div class="buttons-container">
+  <button class="mybutton" onclick="goToPage('casino.html')">Casino</button>
+  <button class="mybutton" onclick="goToPage('memory.html')">Memory</button>
+  <button class="mybutton" onclick="goToPage('mixtape.html')">Mixtape</button>
+</div>
+
       </div>
       
     
@@ -75,26 +92,16 @@
       </audio>
       
      <script>
+ const playBtn = document.getElementById('play-music');
+playBtn.addEventListener('click', () => {
   const audio = document.getElementById('bg-music');
-  let audioStarted = false;
+  audio.play().then(() => {
+    playBtn.style.display = 'none'; // ascunde butonul când începe muzica
+  }).catch(err => {
+    console.warn('Nu s-a putut porni muzica:', err);
+  });
+});
 
-  function startMusic() {
-    if (audioStarted) return;
-
-    audio.play().then(() => {
-      audioStarted = true;
-      console.log('Muzica a pornit.');
-    }).catch((err) => {
-      console.warn('Eroare la play:', err);
-    });
-
-    window.removeEventListener('click', startMusic);
-    window.removeEventListener('keydown', startMusic);
-  }
-
-  // Așteaptă interacțiune
-  window.addEventListener('click', startMusic);
-  window.addEventListener('keydown', startMusic);
 </script>
 
       
